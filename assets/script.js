@@ -31,7 +31,7 @@ var quesitons = [
 // vaiables for score and questions
 
 var score = 0;
-var questionsIndex = 0;
+var questionIndex = 0;
 
 // start of woring code
 
@@ -81,7 +81,7 @@ function render(questionsIndex){
     for (var i = 0; i <quesitons.length; i++){
         //appends questions
         var userQuestion = questions[questionIndex].title;
-        var userChoices = questions[questionsIndex].choices;
+        var userChoices = questions[questionIndex].choices;
         questionsHere..textContent = userQuestion;
     }
     //New questions choice
@@ -93,3 +93,37 @@ function render(questionsIndex){
         listItem.addEventListener("click", (compare));
     })
 }
+// event compare
+function compare(event){
+    var element = event.target;
+
+    if (element.matches("li")){
+        var createDiv = document.createElement("div");
+        createDiv.setAttribute("id", "createDiv");
+        // correct
+        if (element.textContent == quesitons[questionIndex].answer) {
+            score ++;
+            createDiv.textContent = "Nice! The correct answer is: " + questions[questionIndex].answer;
+
+            //WRONG
+        } else { 
+            //deducts 5 seconds off secondsLeft for wrong answer
+            secondsLeft = secondsLeft - penalty;
+            createDiv.textContent = "NOPE! the right answer is " + questions[questionIndex].answer;
+
+        }
+    }
+    //question number
+    questionIndex++;
+
+    if (questionIndex >= questions.length){
+        // All done will append stat page
+        allDone();
+        createDiv.textContent = "Quiz is over" + " " + "you got  " + score + "/" + questions/length + "Correct";
+    } else {
+        render(questionIndex);
+                
+    }
+    questionsHere.appendChild(createDiv);
+}
+
