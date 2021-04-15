@@ -5,32 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS links go here-->
-    
+    <link rel= "stylesheet" type="text/css" href="assets/style.css">
+
+
+    <!-- title-->
     <title>Java Quiz</title>
 </head>
 <body>
-<!-- header start-->
-    <nav class = "navbar">
-        <!-- container for scores Title and Timer-->
-        <div class="title-container">
-            <div id="Scores">View Past Scores</div>
+    <!-- High scores link-->
+    <a href="HighScores.html">HIGGGGHHH SCOOOREEE</a>
+    <!--wrapper for timer content and buttons-->
+    <div id="wrapper">
+        <div id="thisIsTimer"></div>
+        <!-- Quiz Content-->
+        <div id ="questions">
             <h1>THIS IS A QUIZ</h1>
-            <div class="timer">Timer display</div>
+            <p>answer the following questions before the timer runs out. 
+                Incorrect deduct BOTH time and score</p>
+            <ul id="choices"></ul>
+            <!--Buttons-->
+            <button id="startTime">BEGIN</button>
         </div>
-    </nav>
-    <!-- end of header -->
 
-    <!-- quiz goes here-->
-    <div class="quiz-container">
-        <section id="quiz-questions">woah</section>
+
     </div>
 
-    <!-- footer -->
-
-
-    <!-- end footer-->
+    
+  
 
     <!-- js file links here-->
+    <script src="assets/script.js"></script>
 
 </body>
 </html>
