@@ -71,3 +71,25 @@ timer.addEventListener("click",function(){
     }
     render(questionsIndex);
 });
+
+// QUESTIONS ANF CHOICES WRITTEN TO PAGE
+function render(questionsIndex){
+    //clears existing
+    questionsHere.innerHTML = "";
+    ulCreate.innerHTML = "";
+    //loops info to array
+    for (var i = 0; i <quesitons.length; i++){
+        //appends questions
+        var userQuestion = questions[questionIndex].title;
+        var userChoices = questions[questionsIndex].choices;
+        questionsHere..textContent = userQuestion;
+    }
+    //New questions choice
+    userChoices.forEach(function (newItem){
+        var listItem = document.createElement("li");
+        listItem.textContent = newItem;
+        questionsHere.appendChild(ulCreate);
+        ulCreate.appendChild(listItem);
+        listItem.addEventListener("click", (compare));
+    })
+}
