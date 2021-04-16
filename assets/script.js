@@ -61,7 +61,7 @@ timer.addEventListener("click",function(){
             thisIsTimer.textContent = "TIME:  " + secondsLeft;
 
             if(secondsLeft <=0){
-                clearInterval{intervalHold;
+                clearInterval(intervalHold);
                 allDone();
                 thisIsTimer.textContent = "TIME HAS EXPIRED";
             
@@ -82,7 +82,7 @@ function render(questionsIndex){
         //appends questions
         var userQuestion = questions[questionIndex].title;
         var userChoices = questions[questionIndex].choices;
-        questionsHere..textContent = userQuestion;
+        questionsHere.textContent = userQuestion;
     }
     //New questions choice
     userChoices.forEach(function (newItem){
@@ -126,4 +126,86 @@ function compare(event){
     }
     questionsHere.appendChild(createDiv);
 }
+// functions to append last page
+function allDone() {
+    questionsHere.innerHTML= "" ;
+    thisIsTimer.innerHTML = "" ;
 
+    //heading
+    var createH1 = document.createElement("h1");
+    createH1.setAttribute("id", "createH1");
+    createH1.textContent = "FINISHED!"
+
+    questionsHere.appendChild(createH1);
+
+    //paragraph
+    var createP = document.createElement("p");
+    createP.setAttribute("id", "createP");
+
+    questionsHere.appendChild(createP);
+
+    // remaining time replaced with score
+    if (secondsLeft >=0) {
+        var timeRemaining= secondsLeft;
+        var createP2 = document
+        clearInterval(intervalHold);
+        createP.textContent = "Your score is:  " + timeRemaining;
+
+        questionsHere.appendChild(createP2);
+    }
+
+    ///// Label for initails
+    var createLabel = document.createElement("label");
+    createLabel.setAttribute("id", "createLabel");
+    createLabel.textContent = "Enter Initials:  ";
+
+    questionsHere.appendChild(createLabel);
+
+    // input
+    var createInput = document.createElement("input");
+    createInput.setAttribute("type","text");
+    createInput.setAttribute("id","initials");
+    createInput.textContent = "";
+
+    questionsHere.appendChild(createInput);
+    
+
+    // creates submit button
+    var createSubmit = document.createElement("button");
+    createSubmit.setAttribute("type", "submit");
+    createSubmit.setAttribute("id" , "submit");
+    createSubmit.textContent = "";
+
+    questionsHere.appendChild(createInput);
+
+    // event listener for score and initials local storage// capture
+    createSubmit.addEventListener("click", function(){
+        var initials = createInput.value;
+
+        if (initials === null){
+            console.log("NO VALUE");
+
+        }
+        else {
+            var finalScore = {
+                initials : initials,
+                Score : timeRemaining
+            }
+            console.log(finalScore);
+            var allScores = localStorage.getItem("allScores");
+            if (allScores === null){
+                allScores = [];
+            }
+            else{
+                allScores = JSON.parse(allScores);
+            }
+            allScores.push(finalScore);
+            var newsScore = JSON.stringify(allScores);
+            localStorage.setItem("allScores", newsScore);
+            // Final page placement
+            window.location.replace("./HighScores.html");
+        }
+    });
+
+    
+}    
