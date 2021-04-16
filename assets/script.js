@@ -1,30 +1,30 @@
 // array variable for questions
-var quesitons = [
+var questions = [
     
     {   
-        title: "",
-        choices:[""],
-        answer: "",
+        title: "The condition in an if /else statement is enclosed with what?",
+        choices:["quotes", "curly brackets", "parentheses", "square brackets"],
+        answer: "parentheses",
     },
     {   
-        title: "",
-        choices:[""],
-        answer: "",
+        title: "Arrays in Javascript can be used to store what?",
+        choices:["numbers and strings" , "other arrays", "booleans" , "all of these"],
+        answer: "all of these",
     },
     {   
-        title: "",
-        choices:[""],
-        answer: "",
+        title: "A very useful tool used during development and debugging is which of the following?",
+        choices:["terminal", "for loops", "Javascript", "console log"],
+        answer: "console log",
     },
     {   
-        title: "",
-        choices:[""],
-        answer: "",
+        title: "String Values must b eenclosed with ____ when being assigned to variables.",
+        choices:["commas", "curly brackets" , "quotes" , "parentheses"],
+        answer: "quotes",
     },
     {   
-        title: "",
-        choices:[""],
-        answer: "",
+        title: "commonly used data types do NOT include:",
+        choices:["strings"," booleans", "alerts", "numbers" ],
+        answer: "alerts",
     },
 ];
 
