@@ -69,16 +69,16 @@ timer.addEventListener("click",function(){
 
         } ,1000);
     }
-    render(questionsIndex);
+    render(questionIndex);
 });
 
 // QUESTIONS ANF CHOICES WRITTEN TO PAGE
-function render(questionsIndex){
+function render(questionIndex){
     //clears existing
     questionsHere.innerHTML = "";
     ulCreate.innerHTML = "";
     //loops info to array
-    for (var i = 0; i <quesitons.length; i++){
+    for (var i = 0; i <questions.length; i++){
         //appends questions
         var userQuestion = questions[questionIndex].title;
         var userChoices = questions[questionIndex].choices;
