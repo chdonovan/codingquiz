@@ -72,7 +72,7 @@ timer.addEventListener("click",function(){
     render(questionIndex);
 });
 
-// QUESTIONS ANF CHOICES WRITTEN TO PAGE
+// QUESTIONS And CHOICES WRITTEN TO PAGE
 function render(questionIndex){
     //clears existing
     questionsHere.innerHTML = "";

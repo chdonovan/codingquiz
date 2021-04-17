@@ -65,3 +65,31 @@ textarea{
     font-size: 20px;
     color: antiquewhite;
 }
+label{
+    margin-right: 10px;
+
+}
+input{
+    margin-bottom: 20px;
+    width: 50%;
+    border:1px solid #FC4445;
+}
+
+h1 {
+    text-align: center;
+}
+li{
+    background-color: #242282;
+    margin-top: 10px;
+    padding: 5px 15px;
+    width:80%;
+    font-size: 18px;
+    color: antiquewhite;
+
+}
+
+#questionsHere{
+    margin-top: 20px;
+    border-top: 1px solid #FC4445;
+    
+}
