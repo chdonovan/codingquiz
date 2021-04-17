@@ -2,7 +2,7 @@
 
 var HighScore = document.querySelector("#highscore");
 var clear = document.querySelector("#clear");
-var goBack = document.querySelector("#clear");
+var goBack = document.querySelector("#goback");
 
 // clear score event
 clear.addEventListener("click", function(){

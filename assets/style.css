@@ -1,0 +1,14 @@
+#wrapper{
+    position: absolute;
+    left: 30%;
+    top : 20%;
+    width: 500px;
+    border: 1px solid #242282;
+}
+#startTime{
+    background-color: #242282;
+    margin-left: 33%;
+    padding: 15px , 32px;
+    font-size: 20px;
+    color: antiquewhite;
+}
