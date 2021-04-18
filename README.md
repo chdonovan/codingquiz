@@ -10,4 +10,4 @@ SITE : https://chdonovan.github.io/codingquiz/
 REPO : https://github.com/chdonovan/codingquiz
 
 ### screenshot
-![](assets/images/quizshot)
+![](assets/images/quizshot.png)
