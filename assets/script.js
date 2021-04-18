@@ -147,7 +147,7 @@ function allDone() {
     // remaining time replaced with score
     if (secondsLeft >=0) {
         var timeRemaining= secondsLeft;
-        var createP2 = document
+        var createP2 = document.createElement("p");
         clearInterval(intervalHold);
         createP.textContent = "Your score is:  " + timeRemaining;
 
@@ -174,9 +174,9 @@ function allDone() {
     var createSubmit = document.createElement("button");
     createSubmit.setAttribute("type", "submit");
     createSubmit.setAttribute("id" , "submit");
-    createSubmit.textContent = "";
+    createSubmit.textContent = "Submit";
 
-    questionsHere.appendChild(createInput);
+    questionsHere.appendChild(createSubmit);
 
     // event listener for score and initials local storage// capture
     createSubmit.addEventListener("click", function(){
