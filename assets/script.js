@@ -189,19 +189,18 @@ function allDone() {
         else {
             var finalScore = {
                 initials : initials,
-                Score : timeRemaining
+                Score: timeRemaining
             }
             console.log(finalScore);
             var allScores = localStorage.getItem("allScores");
             if (allScores === null){
                 allScores = [];
-            }
-            else{
+            } else{
                 allScores = JSON.parse(allScores);
             }
             allScores.push(finalScore);
-            var newsScore = JSON.stringify(allScores);
-            localStorage.setItem("allScores", newsScore);
+            var newScore = JSON.stringify(allScores);
+            localStorage.setItem("allScores", newScore);
             // Final page placement
             window.location.replace("./HighScores.html");
         }
